@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Account information
+{% endblock %}
+
+
+{% block main %}
+<div class = "container">
+    <h2>Stocks purchase/sell history review</h2>
+    <p>This is the history review of each stock transaction you have made.</p>
+    <table class = "table">
+        <tr class = "info">
+            <th>Stock Name</th>
+            <th>Purchase/Sell Price</th>
+            <th>Purchase/Sell Quantity</th>
+            <th> Transaction Time</th>
+        </tr>
+        {% for b in b_list %}
+        <tr>
+            <td>{{b['stock_symbol']}}</td>
+            <td>{{b['stock_price']}}</td>
+            <td>{{b['quantity']}}</td>
+            <td>{{b['transaction_time']}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<p>You still have {{r_cash}} dollars in cash</p>
+<p>Your total asset (stock + cash) is {{total_asset}} dollars</p>
+    
+{% endblock %}

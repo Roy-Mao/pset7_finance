@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Account information
+{% endblock %}
+
+
+{% block main %}
+<div class = "container">
+    <h2>Stocks Summary Info</h2>
+    <p>This is a information summary for all the stocks that you own.</p>
+    <table class = "table">
+        <tr class = "info">
+            <th></th>
+            {% for item in the_list %}
+            <th> {{item[0]}}</th>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th> Quantities </th>
+            {% for item in the_list %}
+            <td> {{ item[1] }} </td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th> Current price </th>
+            {% for item in price_list %}
+            <td> {{ item }} </td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th> total value </th>
+            {% for item in each_holding %}
+            <td> {{ item }} </td>
+            {% endfor %}
+        </tr>
+    </table>
+</div>
+<p>You still have {{r_cash}} dollars in cash</p>
+<p>Your total asset (stock + cash) is {{total_asset}} dollars</p>
+    
+{% endblock %}
