@@ -1,8 +1,7 @@
-# pset7_finance
-C$50 Finance Implement a website via which users can "buy" and "sell" stocks
 # [Problem Set 7: C$50 Finance](http://cdn.cs50.net/2016/x/psets/7/pset7/pset7.html)
 
 ***Note:*** *vendor, the folder that contains CS50’s PHP library, is not included in this repo folder.*
+C$50 Finance Implement a website via which users can "buy" and "sell" stocks
 
 ### Objectives
 - Introduce you to HTML, CSS, PHP, and SQL.
